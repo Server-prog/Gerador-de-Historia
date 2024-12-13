@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca de Histórias</title>
+  <link rel="stylesheet" href="Biblioteca.css">
+</head>
+<body>
+  <header>
+    <div>Biblioteca de Histórias</div>
+    <img src="https://img.icons8.com/clouds/100/book.png" alt="Livro infantil">
+  </header>
+
+  <div class="container">
+    <h1>Explore Histórias Infantis</h1>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Pesquise por título ou personagem...">
+    </div>
+
+    <div class="library-grid" id="libraryGrid">
+      <!-- Histórias serão carregadas dinamicamente -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Gerador de Histórias. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // Simulação de dados (será substituído pelo meu back David futuramente.)
+    const historias = [
+      {
+        id: 1,
+        titulo: "A Princesa Corajosa",
+        personagem: "Aurora",
+        descricao: "Uma princesa que enfrentou seus medos e ajudou seu reino.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 1,
+        titulo: "Os Dragões do Reino Encantado",
+        personagem: "Aurora",
+        descricao: "Aventuras cheias de magia e fogo.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "O Dragão Aventureiro",
+        personagem: "Draco",
+        descricao: "Draco embarca em uma jornada pela floresta mágica.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "A Bela e o Monstro",
+        personagem: "Draco",
+        descricao: "Uma história de amizade e coragem.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "Os Animais Exploradores",
+        personagem: "Draco",
+        descricao: "Descubra novos mundos com amigos peludos!",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "Os 3 mostiqueiros",
+        personagem: "Draco",
+        descricao: "Draco embarca em uma jornada pela floresta mágica.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "O Pai Natal",
+        personagem: "Draco",
+        descricao: "Draco embarca em uma jornada pela floresta mágica.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "O menino Jesus",
+        personagem: "Draco",
+        descricao: "Draco embarca em uma jornada pela floresta mágica.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "O anãozinho",
+        personagem: "Draco",
+        descricao: "Draco embarca em uma jornada pela floresta mágica.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "O Lobo mau",
+        personagem: "Draco",
+        descricao: "Draco embarca em uma jornada pela floresta mágica.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 2,
+        titulo: "As aventuras do Pitter Pan",
+        personagem: "Draco",
+        descricao: "Draco embarca em uma jornada pela floresta mágica.",
+        capa: "https://via.placeholder.com/250x150"
+      },
+      {
+        id: 3,
+        titulo: "A Cidade Perdida",
+        personagem: "Luna, a Exploradora",
+        descricao: "Luna descobre um mapa que a leva a uma cidade cheia de mistérios.",
+        capa: "https://via.placeholder.com/250x150"
+      }
+    ];
+
+    const libraryGrid = document.getElementById('libraryGrid');
+    const searchInput = document.getElementById('searchInput');
+
+    // Função para carregar as histórias
+    const carregarHistorias = (filtro = '') => {
+      libraryGrid.innerHTML = ''; // Limpa o grid
+
+      const historiasFiltradas = historias.filter(historia => 
+        historia.titulo.toLowerCase().includes(filtro.toLowerCase()) ||
+        historia.personagem.toLowerCase().includes(filtro.toLowerCase())
+      );
+
+      historiasFiltradas.forEach(historia => {
+        const card = `
+          <div class="story-card">
+            <img src="${historia.capa}" alt="Capa da História">
+            <h3>${historia.titulo}</h3>
+            <p>${historia.descricao}</p>
+            <a href="historia${historia.id}.html" class="view-button">Ver História</a>
+          </div>
+        `;
+        libraryGrid.innerHTML += card;
+      });
+
+      if (historiasFiltradas.length === 0) {
+        libraryGrid.innerHTML = '<p>Nenhuma história encontrada.</p>';
+      }
+    };
+
+    carregarHistorias();
+
+    // Atualiza a exibição ao digitar na barra de pesquisa
+    searchInput.addEventListener('input', () => {
+      carregarHistorias(searchInput.value);
+    });
+  </script>
+</body>
+</html>

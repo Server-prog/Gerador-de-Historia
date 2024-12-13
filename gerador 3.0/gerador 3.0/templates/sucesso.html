@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sucesso</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: linear-gradient(to right, #b166bb, #42f5ec);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff00f2;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #42a5f5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background: #66bb6a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro Realizado!</h1>
+    <p>Estás dentro</p>
+    <a href="{{ url_for('index') }}">Voltar ao cadastro</a>
+  </div>
+</body>
+</html>

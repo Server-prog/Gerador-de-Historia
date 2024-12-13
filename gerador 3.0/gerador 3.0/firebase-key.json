@@ -1,0 +1,14 @@
+{
+  "type": "service_account",
+  "project_id": "gerador-de-historias-d7bd8",
+  "private_key_id": "caab22e794bf3dcaab760a55cf644630c467550e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCHeyLhExfPb+VN\nQxi0AIBlpL3L8STs1Ro+pSou+rsFid0Gdp8BOtiQDtrzGwOmS3O6t1vjUIpIJuI9\nAjkGQY81qKKAg6pv4l/nhpJWapxL5j5n3hT2wcGBQk7CLNNaXKrOEG7TSs72E8EL\nOypIqvwidy8tr4nKFIBLnF41ieZdX43eeIvVvzdF1Y+zCEOXG7s+iqr8KXAy0fjY\ngicOLbySWw/tTDsF6jysiLEoiQW30iEAeFgaozHdNLuHW3SfdKxBen2Y5V0VrpjM\nBTHk27IwGIUKVoKx/lqh5cE6BMG4YTYsgvDEAtrefVyNWU1KwjcRljS4Q/TAGbI8\nzpToLKWrAgMBAAECggEANWPCroTqLK6RY/2thf3um1+tBeodXZFrOsW21nWrbvbR\n2cK0TXVFs5uPEB+UtBtm2213siBipiVgoZ83Hq6GQ6SViWSZrWa92Y0QLSrtNgHh\nlOgRRd68JXaed+nXTnRXQUZ7jhucbKADQqxJsQJkwyZJuszC1ZZ3qpRQEfQqip/T\nDaqL/Vg8eKwCoHzyr3DOoKe28THRfuzrg3zKKm946n7bTXLBDq09zVp15tihLxvn\nGjF9WsFfCvBJuujkJngN2vUpNCXeaaam08wacYeqwAI//2zMWWgVCctaEtk5gBlI\nCfwOGKK6DP0KgnMFQyyc0p8MPCFhViKA+8oVW9VGXQKBgQC6lqGjmSLr0ZPZoRZ9\niQ3WSPgbbp5D5iNjmeLP3rHSBWUax4wNmDZD+OFeXwICCtNsoGTCTr1+eTZFDghk\nz76h+jJ0SbfKZ82iTkzuS2LhZeZwwZQfSsf+YZj1zuDovlQcSn6LTmySs8PXR5OI\nB9F6/QfZ4oTf2Iueu28Azbk0/wKBgQC54WUWcGZpzna4HzihSAgJGE1DTa5a2GRG\nqnDBljqGuB8FdINlKoO1blbZDR01zgqr7ddfVfu3zGqyzuGa4JrF7ZW3qyTD6dUp\nmC5tGx5nGSMd1oMezZZWNLVpCrrkhr5Z+maG/FyC3EXb5Cpz3+cieNcQHoV4wYNe\npw3mU6DzVQKBgDE25e+GxsU4hCzU5l+6NKIeoQJrTOdP3mm4/zAg5vokXiSQGYrE\naRvIm3kOyjLLtDRkoe72YdjoE75nEyOz/+4tVf2CLC4A7yYuTPBVhgE5pWx8Qpt2\nWAXqrDO5m20INps3suT/jHetXqx7vpgUp9Yuw1FfA/ke3sTBX2fw2zb1AoGAJTqV\niob8nBh0ArCOIQ9SPLAXWXGHiD5q5xRf/QXftvfNjsQlRO/c7UuqLVLJFOuti33Z\ncwi/n7JbdHCnEuQFW7sYD29Br9N3lBscwVF7J18Lf4BlRpgaki2AYAd8IyUxnsfe\nHQ8SYEtJ2p66OfcQTgEx4dKbHPJ1I1IGIKmDRPkCgYBlOFNRqDRlZZFcyYcS76Z7\nj13dQ4U9FIVtS1MkFwWJBjEMM+uBPqdel+vrHO+fXjjygF1VnI1AXyYztjxOwt6g\nWErXgMDN4LWf/4424I/j70w3VgqO7f+LmhuGZkqLhRXXtPY2RDthDpW4ubhaAy0r\n6Zg5sGj5JpOb0i5sj+RLXA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-5kva6@gerador-de-historias-d7bd8.iam.gserviceaccount.com",
+  "client_id": "115410065102242190347",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5kva6%40gerador-de-historias-d7bd8.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+

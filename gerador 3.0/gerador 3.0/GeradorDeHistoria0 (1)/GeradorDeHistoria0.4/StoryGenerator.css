@@ -1,0 +1,111 @@
+/* Reset básico */
+body, h1, h2, p, label, input, textarea, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fonte */
+  body {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Estilo infantil */
+    background-color: #f7f9fc; /* Fundo claro e amigável */
+    color: #333;
+  }
+  
+  /* Cabeçalho */
+  .interactive-header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ccecff; /* Rosa suave */
+    color: #333;
+    border-bottom: 5px solid #99ebff;
+  }
+  
+  .interactive-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .interactive-header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Formulário */
+  .interactive-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .form-box {
+    background-color: #ffffff;
+    border: 2px solid #99e7ff;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #050b0f;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  input, textarea, select, button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 2px solid #99e2ff;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button {
+    background-color: #ff66eb;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #33cfff;
+  }
+  
+  /* Pré-visualização */
+  .image-preview {
+    border: 2px dashed #ff99cc;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+  
+  /* Rodapé */
+  .interactive-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffccff;
+    margin-top: 2rem;
+    color: #333;
+  }
+  
+  

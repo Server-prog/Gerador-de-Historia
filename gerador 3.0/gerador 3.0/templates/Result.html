@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>História Gerada</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif; 
+      background: linear-gradient(to bottom, #ffecb3, #ffc1e3); 
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to right, #ff6f61, #ff856f); 
+      padding: 20px;
+      color: white;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 60px;
+      height: auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin-top: 120px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transform: scale(1);
+      animation: fadeIn 1s ease-out;
+    }
+
+    .story-header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(to right, #ff6f61, #ff856f);
+      color: white;
+      border-bottom: 2px solid #ffe6e6; 
+    }
+
+    .story-header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      object-fit: cover;
+      border: 5px solid white;
+      margin-right: 20px;
+    }
+
+    .story-header .details {
+      flex: 1;
+    }
+
+    .story-header .details h2 {
+      margin: 0;
+      font-size: 2em;
+      color: white;
+    }
+
+    .story-header .details p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+      color: #ffe6e6;
+    }
+
+    .story-content {
+      padding: 30px;
+      background: #fff5f7; /* Fundo leve e amigável */
+      font-size: 1.2em;
+      line-height: 1.8em;
+      color: #555;
+      border-radius: 0 0 20px 20px;
+      text-align: justify;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background: white;
+      border-top: 2px solid #ffe6e6;
+    }
+
+    .button-group button {
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(to right, #42a5f5, #66bb6a);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .button-group button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      padding: 15px;
+      color: #6c757d;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>Minha História</div>
+    <img src="https://img.icons8.com/clouds/100/book.png" alt="Livro infantil">
+  </header>
+
+  <div class="container">
+    <!-- Cabeçalho da História -->
+    <div class="story-header">
+      <img src="{{ capa }}" alt="Capa da História" id="storyCover">
+      <!-- Detalhes -->
+      <div class="details">
+        <h2 id="storyTitle">{{ titulo }}</h2>
+        <p><strong>Personagem:</strong> <span id="storyCharacter">{{ personagem }}</span></p>
+      </div>
+    </div>
+
+    <!-- Conteúdo da História -->
+    <div class="story-content" id="storyContent">
+      {{ historia }}
+    </div>
+
+    <div class="button-group">
+      <button id="saveStory">Salvar História</button>
+      <button id="backToHistory">Voltar ao Histórico</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Gerador de Histórias. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
+

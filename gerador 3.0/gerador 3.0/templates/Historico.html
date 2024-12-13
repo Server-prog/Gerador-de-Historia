@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórico de Histórias</title>
+  <style>
+  
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: linear-gradient(to bottom, #ffecb3, #ffc1e3);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ff6f61;
+      padding: 20px;
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header img {
+      width: 60px;
+      height: auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+
+    .history-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .history-card {
+      background: #fff5f7;
+      border: 2px solid #ff6f61;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .history-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .history-card h3 {
+      color: #ff6f61;
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+
+    .history-card p {
+      color: #555;
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+
+    .view-button {
+      display: block;
+      padding: 10px 15px;
+      background: #42a5f5;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .view-button:hover {
+      background: #66bb6a;
+      transform: scale(1.05);
+    }
+
+    .animated-icon {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      background: rgba(255, 111, 97, 0.3);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #ff6f61;
+      color: white;
+      font-size: 1em;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>Histórico de Histórias</div>
+    <img src="https://img.icons8.com/clouds/100/book.png" alt="Livro infantil">
+  </header>
+
+  <div class="container">
+    <h1>Histórias Geradas</h1>
+    <div class="history-grid">
+      
+      <div class="history-card">
+        <div class="animated-icon"></div>
+        <h3>O Dragão Aventureiro</h3>
+        <p>Era uma vez, em um reino distante, um pequeno dragão chamado Draco que adorava explorar...</p>
+        <a href="historia1.html" class="view-button">Ver Mais</a>
+      </div>
+      
+      <div class="history-card">
+        <div class="animated-icon"></div>
+        <h3>A Princesa Corajosa</h3>
+        <p>Em um castelo encantado, uma princesa chamada Aurora decidiu enfrentar seus medos...</p>
+        <a href="historia2.html" class="view-button">Ver Mais</a>
+      </div>
+
+      <div class="history-card">
+        <div class="animated-icon"></div>
+        <h3>O Super-Herói Felpudo</h3>
+        <p>Em uma cidade movimentada, um coelho chamado Max descobre que possui superpoderes...</p>
+        <a href="historia3.html" class="view-button">Ver Mais</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Gerador de Histórias. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

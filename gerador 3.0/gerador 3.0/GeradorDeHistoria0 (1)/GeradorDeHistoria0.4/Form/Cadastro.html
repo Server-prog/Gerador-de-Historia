@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="Cadastro.css">
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro</h2>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="name">Nome Completo</label>
+        <input type="text" id="name" placeholder="Digite seu nome" required>
+        <span class="error-message" id="name-error">Por favor, insira seu nome.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+        <span class="error-message" id="email-error">Por favor, insira um e-mail válido.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Digite sua senha" required>
+        <span class="error-message" id="password-error">A senha deve ter pelo menos 6 caracteres.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirme sua Senha</label>
+        <input type="password" id="confirm-password" placeholder="Confirme sua senha" required>
+        <span class="error-message" id="confirm-password-error">As senhas não coincidem.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" placeholder="Digite seu telefone (opcional)">
+      </div>
+
+      <button type="submit" class="btn-submit">Cadastrar</button>
+      <p class="success-message" id="success-message"></p>
+      <p>Já tem uma conta? <a href="#login-form" onclick="showLogin()">Faça login</a></p>
+    </form>
+  </div>
+
+  <script src="Cadastro.js"></script>
+  
+</body>
+</html>

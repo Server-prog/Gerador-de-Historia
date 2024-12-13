@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <!-- Formulário de Login -->
+<section class="form-container">
+    <div class="form-card">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="email">Gmail:</label>
+        <input type="email" id="email" placeholder="Digite seu Gmail" required />
+  
+        <label for="password">Senha:</label>
+        <input type="password" id="password" placeholder="Digite sua senha" required />
+  
+        <button type="submit" class="form-btn">Entrar</button>
+        <p>Não tem uma conta? <a href="#signup-form" onclick="showSignup()">Cadastre-se</a></p>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Formulário de Cadastro -->
+  <section class="form-container hidden" id="signup-form">
+    <div class="form-card">
+      <h2>Cadastro</h2>
+      <form>
+        <label for="signup-email">Gmail:</label>
+        <input type="email" id="signup-email" placeholder="Digite seu Gmail" required />
+  
+        <label for="signup-password">Senha:</label>
+        <input type="password" id="signup-password" placeholder="Digite sua senha" required />
+
+        <label for="name">Nome do usuario:</label>
+        <input type="nome do usuario" id="nome do usuario" placeholder="Digite o nome" required/>
+  
+        <button type="submit" class="form-btn">Cadastrar</button>
+        <p>Já tem uma conta? <a href="#login-form" onclick="showLogin()">Faça login</a></p>
+      </form>
+    </div>
+  </section>
+  <script>
+    function showSignup() {
+      document.querySelector("#login-form").classList.add("hidden");
+      document.querySelector("#signup-form").classList.remove("hidden");
+    }
+  
+    function showLogin() {
+      document.querySelector("#signup-form").classList.add("hidden");
+      document.querySelector("#login-form").classList.remove("hidden");
+    }
+  </script>
+    
+</body>
+</html>

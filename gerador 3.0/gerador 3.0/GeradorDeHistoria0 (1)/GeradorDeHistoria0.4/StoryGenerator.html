@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Generator</title>
+    <link rel="stylesheet" href="StoryGenerator.css">
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Histórias</title>
+    <style>
+      
+      body {
+        font-family: 'Comic Sans MS', sans-serif;
+        background: linear-gradient(to bottom, #ffecb3, #ffc1e3);
+        margin: 0;
+        padding: 0;
+      }
+  
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #ff6f61;
+        padding: 20px;
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+  
+      header img {
+        width: 60px;
+        height: auto;
+      }
+  
+      .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+  
+      .form-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+      }
+  
+      .form-group {
+        flex: 1;
+        min-width: 250px;
+      }
+  
+      .description-group {
+        flex: 2;
+        min-width: 300px;
+      }
+  
+      label {
+        display: block;
+        font-weight: bold;
+        color: #ff6f61;
+        margin-bottom: 10px;
+      }
+  
+      input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ff6f61;
+        border-radius: 10px;
+        font-size: 1em;
+      }
+  
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+  
+      .preview {
+        margin-top: 20px;
+        padding: 20px;
+        border: 2px dashed #ff6f61;
+        border-radius: 10px;
+        text-align: center;
+        color: #999;
+      }
+  
+      .record-button {
+        margin: 30px auto;
+        width: 70px;
+        height: 70px;
+        background: radial-gradient(circle, #ff6f61, #d32f2f);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        animation: pulse 1.5s infinite;
+      }
+  
+      .record-button:hover {
+        transform: scale(1.1);
+      }
+  
+      .record-button span {
+        font-size: 1.2em;
+        color: white;
+        font-weight: bold;
+      }
+  
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(255, 111, 97, 0.8);
+        }
+        100% {
+          box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+        }
+      }
+  
+      .button-group {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+  
+      .button-group button {
+        padding: 10px 20px;
+        font-size: 1em;
+        border: 2px solid #42a5f5;
+        border-radius: 50%;  
+        background: linear-gradient(to right, #42a5f5, #66bb6a);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s;
+        width: 100px;  
+        height: 100px; 
+      }
+  
+      .button-group button:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>Gerador de Histórias</div>
+      <img src="https://img.icons8.com/clouds/100/book.png" alt="Livro infantil">
+    </header>
+  
+    <div class="container">
+      <div class="form-layout">
+       
+        <div>
+          
+          <div class="form-group">
+            <label for="title">Título da História</label>
+            <input type="text" id="title" placeholder="Digite o título da história">
+          </div>
+  
+          
+          <div class="form-group">
+            <label for="cover">Escolha a Capa</label>
+            <input type="file" id="cover" accept="image/*">
+            <div class="preview" id="coverPreview">Pré-visualização da capa</div>
+          </div>
+  
+          
+          <div class="form-group">
+            <label for="character">Personagem</label>
+            <select id="character">
+              <option value="Princesa">Princesa</option>
+              <option value="Super-herói">Super-herói</option>
+              <option value="Animal Falante">Animal Falante</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+        </div>
+  
+        
+        <div class="description-group">
+          <label for="description">Descrição da História</label>
+          <textarea id="description" placeholder="Adicione uma breve descrição da história"></textarea>
+        </div>
+      </div>
+  
+      <div class="button-group">
+        <!-- Botão Gravar Áudio -->
+        <button class="record-button" id="recordAudioBtn">
+          <span>🎙</span>
+        </button>
+        <button id="generateStoryBtn">Gerar História</button>
+      </div>
+    </div>
+  
+    <script>
+      // Pré-visualização da capa
+      const coverInput = document.getElementById('cover');
+      const coverPreview = document.getElementById('coverPreview');
+  
+      coverInput.addEventListener('change', () => {
+        const file = coverInput.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            coverPreview.innerHTML = `<img src="${e.target.result}" alt="Capa da História" style="max-width: 100%; max-height: 150px;">`;
+          };
+          reader.readAsDataURL(file);
+        } else {
+          coverPreview.textContent = 'Pré-visualização da capa';
+        }
+      });
+  
+      const generateStoryBtn = document.getElementById('generateStoryBtn');
+      generateStoryBtn.addEventListener('click', () => {
+        const title = document.getElementById('title').value;
+        const character = document.getElementById('character').value;
+        const description = document.getElementById('description').value;
+  
+        if (!title || !character || !description) {
+          alert('Por favor, preencha todos os campos para gerar a história.');
+          return;
+        }
+  
+        alert(`História gerada com sucesso!\nTítulo: ${title}\nPersonagem: ${character}\nDescrição: ${description}`);
+      });
+    </script>
+  </body>
+  </html>
+  
+</body>
+</html>
+  

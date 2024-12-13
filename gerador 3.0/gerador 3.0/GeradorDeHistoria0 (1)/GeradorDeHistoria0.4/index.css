@@ -1,0 +1,179 @@
+body, h1, h2, h3, h4, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(to bottom, #ffe6fa, #dff8ff);
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #ffa9e7, #85e8ff);
+    color: #fff;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    text-shadow: 2px 2px #000;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('capa.jpeg') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    animation: background-move 10s infinite alternate;
+  }
+  
+  @keyframes background-move {
+    0% { background-position: center top; }
+    100% { background-position: center bottom; }
+  }
+  
+  .hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .hero-buttons button {
+    background: #ff9ff3;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .hero-buttons button:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .cards {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .card h4 {
+    font-size: 1.5em;
+    margin: 15px 0;
+  }
+
+  .cards .Ler-agora {
+    background: linear-gradient(to right, #9ff4ff, #9ff4ff);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  footer {
+    text-align: center;
+    background: #85e8ff;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+.create {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff3e6; /* Cor de fundo infantil */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    max-width: 800px;
+  }
+  
+  .create h3 {
+    font-size: 2.2em;
+    color: #ff8c42;
+    margin-bottom: 10px;
+  }
+  
+  .create p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .create .generate-story {
+    background: linear-gradient(to right, #ff9ff3, #ffa9e7);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .create .generate-story:hover {
+    background: linear-gradient(to right, #ffa9e7, #ff9ff3);
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .create .generate-story:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  

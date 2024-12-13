@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de História</title>
+  <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <header class="interactive-header">
+      <h1>🌟 Crie Sua Própria Aventura 🌟</h1>
+      <p>Personalize e dê vida à sua imaginação com apenas alguns cliques!</p>
+    </header>
+  
+  <div class="container">
+    <h1>Envio de História</h1>
+    <form id="formHistoria" enctype="multipart/form-data">
+      <label for="titulo">Título da História:</label>
+      <input type="text" id="titulo" name="titulo" placeholder="Digite o título..." required>
+
+      <label for="descricao">Descrição da História:</label>
+      <textarea id="descricao" name="descricao" rows="5" placeholder="Digite a descrição..." required></textarea>
+
+      <label for="imagem">Imagem de Capa (Opcional):</label>
+      <input type="file" id="imagem" name="imagem" accept="image/png, image/jpeg, image/jpg">
+
+      <p>Ou grave um áudio:</p>
+      <button type="button" id="gravarAudio">Gravar Áudio</button>
+      <p id="statusGravacao">Clique em "Gravar Áudio" para começar a gravar.</p>
+
+      <button type="submit">Enviar História</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="teste.js"></script>
+</body>
+</html>
